@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pentagon by blkCapHax</title>
+
+<style>
+	#faces{
+		position: relative;
+		top: 200px;
+		left: 300px;
+		border: 1px solid black;
+		transform-style: preserve-3d;
+		height: 250px;
+		width: 385px;
+		transform:  rotateX(-50deg) rotateY(20deg);
+	}
+	.face{
+		position: absolute;
+		height: 250px;
+		width: 250px;
+		background: yellow;
+		text-align: center;
+		line-height: 250px;
+		transform-style: preserve-3d;
+		background: linear-gradient(to top, rgba(255,81,50,0.8) 0%,rgba(255,246,0,0.7) 100%);
+		box-shadow: inset  10px  0 10px -10px black,
+    	inset  -10px  0 10px -10px black;
+	}
+	.face:nth-child(1){
+		transform: rotateY(18deg) translateZ(200px) translateX(84px);
+	}
+	.face:nth-child(2){
+		transform: rotateY(90deg) translateZ(261px);
+	}
+	.face:nth-child(3){
+		transform: rotateY(162deg) translateZ(200px) translateX(-84px);
+	}
+	.face:nth-child(4){
+		transform: rotateY(234deg) translateZ(101px) translateX(-52px);
+	}
+	.face:nth-child(5){
+		transform: rotateY(-54deg) translateZ(101px) translateX(52px);
+	}
+	
+		@keyframes spinningH {
+  from {
+    transform: rotateX(-5deg) rotateY(0deg);
+  }
+  to{
+    transform: rotateX(-5deg) rotateY(-360deg);
+  }
+}
+
+.animate {
+  -webkit-animation : spinningH 12s infinite linear;
+  -moz-animation    : spinningH 12s infinite linear;
+  -o-animation      : spinningH 12s infinite linear;
+  -ms-animation     : spinningH 12s infinite linear;
+  animation         : spinningH 12s infinite linear;
+}
+</style>
+
+</head>
+
+<body>
+
+<div>
+	<div id="faces" class="animate">
+		<div class="face">1</div>
+		<div class="face">2</div>
+		<div class="face">3</div>
+		<div class="face">4</div>
+		<div class="face">5</div>
+	</div>
+</div>
+
+</body>
+</html>
